@@ -11,6 +11,7 @@ export default class Card extends React.Component {
             location: '',
             image: '',
             category: '',
+
         }
     }
 
@@ -33,7 +34,12 @@ export default class Card extends React.Component {
 
     render() {
         return (
-            <button onClick={() => console.log('ola')}>
+            <button onClick={() => {
+                this.props.toggle();
+                this.props.currenttitle(this.state.title);
+                this.props.currentimage(this.state.image);
+                this.props.currentlocation(this.state.location);
+                }}>
                 <div className="card">
                     <div className="card-img-block">
                         <img src={this.state.image} className="card-img" alt="products" />

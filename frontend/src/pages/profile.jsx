@@ -14,6 +14,7 @@ export default class Profile extends React.Component {
         }
     }
 
+    //dúvidas sobre formulários e event
     handleSubmit(event) {
         console.log('Foi submetido um nome: ');
         event.preventDefault();
