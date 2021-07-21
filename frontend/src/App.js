@@ -6,6 +6,7 @@ import Card from './components/card'
 import Donate from './pages/donate'
 import Profile from './pages/profile'
 import Menu from './components/menu'
+import Search from './pages/search'
 
 export default class App extends React.Component {
   constructor(props) {
@@ -15,6 +16,9 @@ export default class App extends React.Component {
       search: '',
       pageControl: 0,
     }
+
+    this.formChange = this.formChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   async componentDidMount() {
@@ -44,19 +48,27 @@ export default class App extends React.Component {
     this.setState({ pageControl: 2 })
   }
 
+  handleSubmit(){
+    this.setState({ pageControl: 3 })
+  }
+
+  formChange(form) {
+    this.setState({ search: form.target.value });
+    
+  }
+
   render() {
     if (this.state.pageControl === 0) {
       return (
         <div className="App">
 
           <div className="header">
-            <img src="/assets/logo.png" className="logo" />
+            <img src="/assets/logo.png" className="logo" alt="header-logo"/>
           </div>
 
           <div className="searchbar">
-            <input type="text" className="searchbar-bar" placeholder="Insira uma peça de roupa" />
-
-            <button className="searchbar-btn"><SearchIcon /></button>
+            <input type="text" className="searchbar-bar" placeholder="Insira uma peça de roupa" value={this.state.search} onChange={this.formChange} />
+            <button onClick={this.handleSubmit} className="searchbar-btn" ><SearchIcon/></button>
           </div>
 
           <h3 id="subtitle">Anúncios</h3>
@@ -67,7 +79,7 @@ export default class App extends React.Component {
               {
                 this.state.productID.map(e => (
                   <Card key={e}
-                  id={e}
+                    id={e}
                   />
                 ))
               }
@@ -85,7 +97,7 @@ export default class App extends React.Component {
 
     if (this.state.pageControl === 1) {
       return (
-        <div className="App">
+        <div>
           <Donate />
           <Menu
             homePage={() => this.homePage()}
@@ -98,8 +110,21 @@ export default class App extends React.Component {
 
     if (this.state.pageControl === 2) {
       return (
-        <div className="App">
+        <div>
           <Profile />
+          <Menu
+            homePage={() => this.homePage()}
+            donatePage={() => this.donatePage()}
+            profilePage={() => this.profilePage()}
+          />
+        </div>
+      )
+    }
+
+    if (this.state.pageControl === 3) {
+      return (
+        <div>
+          <Search search={this.state.search} />
           <Menu
             homePage={() => this.homePage()}
             donatePage={() => this.donatePage()}

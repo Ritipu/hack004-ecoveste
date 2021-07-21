@@ -1,5 +1,6 @@
 import React from 'react';
 import '../css/card.css'
+import LocationOnIcon from '@material-ui/icons/LocationOn';
 
 export default class Card extends React.Component {
     constructor(props) {
@@ -34,11 +35,11 @@ export default class Card extends React.Component {
         return (
             <div className="card">
                 <div className="card-img-block">
-                    <img src={this.state.image} className="card-img" />
+                    <img src={this.state.image} className="card-img" alt="products"/>
                 </div>
                 <div className="card-txt-block">
-                    <h3>{this.state.title}</h3>
-                    <p>{this.state.location}</p>    
+                    <span className="card-title">{this.state.title}</span>
+                    <span className="card-location">{<LocationOnIcon/>}{this.state.location}</span>    
                 </div>
             </div>
         )

@@ -27,7 +27,7 @@
 }
 
 .searchbar-bar {
-  width: 75%;
+  width: 17rem;
   height: 40px;
   border: none;
   border-radius: 7px;
@@ -43,8 +43,8 @@
   background: #82ad29;
   color: #fff;
   border-radius: 7px;
-  width: 3rem;
-  height: 42px;
+  width: 3.2rem;
+  height: 40px;
   margin-left: -1rem;
 }
 
