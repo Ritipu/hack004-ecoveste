@@ -12,8 +12,19 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      id: '60f81e54b4a10d10172b7347'
     }
+  }
+
+  componentDidMount() {
+    fetch('/byid', {
+      method: 'POST',
+      body: JSON.stringify({id: this.state.id}),
+      headers: {
+        "Content-Type": 'application/json'
+      }
+    })
+
   }
   render() {
     return (
@@ -58,7 +69,7 @@ export default class App extends React.Component {
           </button>
         </div>
 
-        <Products />
+        
 
 
 

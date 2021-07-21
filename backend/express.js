@@ -1,7 +1,8 @@
 import express from 'express';
 import { 
     getProducts,
-    getIds
+    getIds,
+    getElementById
  } from './db.js';
 
 //import bcrypt from 'bcrypt';
@@ -9,6 +10,7 @@ import {
 const server = express();
 const PORT = 3401;
 
+server.use(express.json())
 //server.use(json());
 
 server.get('/api', (req, res) => {
@@ -17,14 +19,22 @@ server.get('/api', (req, res) => {
     })
 })
 
+//get all the products
 server.get("/products", async (req, res) => {
     const products = await getProducts();
     res.status(200).json({ products })
 }) 
 
+//get all the ids
 server.get("/ids", async (req, res) => {
     const products = await getIds();
     res.status(200).json({ products })
+}) 
+
+//get a single product by its id
+server.post("/byid", async (req, res) => {
+    const product = await getElementById(req.body);
+    res.status(200).json({ product })
 }) 
 
 // server.post("/api/auth", async (req, res) => {
