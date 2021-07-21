@@ -1,5 +1,8 @@
 import express from 'express';
-import { getProducts } from './db.js';
+import { 
+    getProducts,
+    getIds
+ } from './db.js';
 
 //import bcrypt from 'bcrypt';
 
@@ -16,6 +19,11 @@ server.get('/api', (req, res) => {
 
 server.get("/products", async (req, res) => {
     const products = await getProducts();
+    res.status(200).json({ products })
+}) 
+
+server.get("/ids", async (req, res) => {
+    const products = await getIds();
     res.status(200).json({ products })
 }) 
 
