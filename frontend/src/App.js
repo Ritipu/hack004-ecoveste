@@ -4,6 +4,7 @@ import './css/App.css';
 import SearchIcon from '@material-ui/icons/Search';
 import Card from './components/card'
 import Donate from './pages/donate'
+import Profile from './pages/profile'
 import Menu from './components/menu'
 
 
@@ -86,5 +87,19 @@ export default class App extends React.Component {
         </div>
       )
     }
+
+    if (this.state.pageControl === 2) {
+      return (
+        <div className="App">
+          <Profile />
+          <Menu 
+          homePage={() => this.homePage()}
+          donatePage={() => this.donatePage()}
+          profilePage={() => this.profilePage()}
+          />
+        </div>
+      )
+    }
+
   }
 }

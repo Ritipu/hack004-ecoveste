@@ -1,10 +1,10 @@
 import React from 'react';
 
-export default class Donate extends React.Component {
+export default class Profile extends React.Component {
     render() {
         return (
             <>
-                <h1>Ola do Donate</h1>
+                <h1>Ola do Profile</h1>
             </>
         )
     }
