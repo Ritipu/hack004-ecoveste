@@ -33,15 +33,17 @@ export default class Card extends React.Component {
 
     render() {
         return (
-            <div className="card">
-                <div className="card-img-block">
-                    <img src={this.state.image} className="card-img" alt="products"/>
+            <button onClick={() => console.log('ola')}>
+                <div className="card">
+                    <div className="card-img-block">
+                        <img src={this.state.image} className="card-img" alt="products" />
+                    </div>
+                    <div className="card-txt-block">
+                        <span className="card-title">{this.state.title}</span>
+                        <span className="card-location">{<LocationOnIcon />}{this.state.location}</span>
+                    </div>
                 </div>
-                <div className="card-txt-block">
-                    <span className="card-title">{this.state.title}</span>
-                    <span className="card-location">{<LocationOnIcon/>}{this.state.location}</span>    
-                </div>
-            </div>
+            </button>
         )
     }
 }

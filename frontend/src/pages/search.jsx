@@ -30,15 +30,17 @@ export default class Search extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="search-main">
                 <h3>Foram encontrados {this.state.numOfResults} artigos de {this.state.searchResult}</h3>
-                {
-                    this.state.results.map(d => (
-                        <Card key={d}
-                        id={d}
-                        />
-                    ))
-                }
+                <div className="results">
+                    {
+                        this.state.results.map(d => (
+                            <Card key={d}
+                                id={d}
+                            />
+                        ))
+                    }
+                </div>
             </div>
         )
     }
