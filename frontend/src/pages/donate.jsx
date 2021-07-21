@@ -1,18 +1,20 @@
 import React from 'react';
+import "../css/donate.css"
 
 export default class Donate extends React.Component {
     render() {
         return (
             <>
-                <form>
+                <h2>Criar novo anúncio</h2>
+                <form className="donateForm">
                     IMAGEM <br/>
                     <label>
                         Título do anúncio* <br/>
                         <input type="text" name="title" placeholder="p.ex. calças de ganga" required /><br />
                     </label>
                     <label>
-                        Categoria*
-                        <select name="category">
+                        Categoria* <br/>
+                        <select name="category" required>
                             <option value="calças">Calças</option>
                             <option value="casacos">Casacos</option>
                             <option value="t-shirt">T-shirt</option>
@@ -24,13 +26,13 @@ export default class Donate extends React.Component {
                     </label> <br/>
                     <label>
                         Descrição* <br/>
-                        <input type="textarea" name="description" placeholder="Escreva uma pequena descrição para que os outros utilizadores saibam mais sobre o seu produto." required /><br />
+                        <textarea name="description" placeholder="Escreva uma pequena descrição para que os outros utilizadores saibam mais sobre o seu produto." required /><br />
                     </label>
-                    <p>
+                    
                         <h3>Contacto</h3>
                     <label>
-                        Localização
-                        <select name="location">
+                        Localização* <br/>
+                        <select name="location" required>
                             <option value="Agualva_Mira_Sintra">Agualva e Mira Sintra</option>
                             <option value="Algueirao_Mem_Martins">Algueirão-Mem Martins</option>
                             <option value="Almargem_Bispo_Pero_Pinheiro_Montelavar"> Almargem do Bispo, Pêro Pinheiro e Montelavar</option>
@@ -56,8 +58,8 @@ export default class Donate extends React.Component {
                         Email <br/>
                         <input type="email" name="email" placeholder="Insira o email a ser apresentado" /><br />
                     </label>
-                    </p>
                     <input type="submit" value="Publicar Anúncio"></input>
+                
                 </form>
             </>
         )

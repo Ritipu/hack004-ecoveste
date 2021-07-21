@@ -29,7 +29,7 @@ export default class Profile extends React.Component {
                     </label>
                     <input type="submit" value="Submeter"></input>
                 </form>
-                <button onClick={() => this.togglePopup()} className="registar">Registe-se aqui</button>
+                <button onClick={() => this.togglePopup()} className="register">Registe-se aqui</button>
 
                 {this.state.isOpen && <Popup
                     content={<>
