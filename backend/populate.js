@@ -12,7 +12,4 @@ async function populate() {
     insertDonors(jsond.donors);
 }
 
-//teste
-
-
 populate().then(() => console.log('db populated'))

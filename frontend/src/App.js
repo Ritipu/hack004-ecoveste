@@ -13,36 +13,39 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: '60f81e54b4a10d10172b7347',
+      productID: [],
       search: '',
       pageControl: 0,
     }
   }
 
-  componentDidMount() {
-    fetch('/byid', {
-      method: 'POST',
-      body: JSON.stringify({id: this.state.id}),
-      headers: {
-        "Content-Type": 'application/json'
-      }
-    })
+  async componentDidMount() {
+    await this.getProductID();
+  }
 
-  getByCategory() {
-    // fetch server POST === enviar search state
+  async getProductID() {
+    await fetch('/ids', {
+      method: 'GET',
+      contentType: 'application/json'
+    })
+      .then(res => res.json())
+      .then(ids => this.setState({
+        productID: ids.products
+      }))
   }
 
   homePage() {
-    this.setState({ pageControl: 0})
+    this.setState({ pageControl: 0 })
   }
 
   donatePage() {
-    this.setState({ pageControl: 1})
+    this.setState({ pageControl: 1 })
   }
 
   profilePage() {
-    this.setState({ pageControl: 2})
+    this.setState({ pageControl: 2 })
   }
+
   render() {
     if (this.state.pageControl === 0) {
       return (
@@ -63,17 +66,20 @@ export default class App extends React.Component {
 
           <div className="ad-body">
             <div className="ad-body-row">
-              <Card />
-              <Card />
-              <Card />
-              <Card />
+              {
+                this.state.productID.map(e => (
+                  <Card key={e}
+                  id={e}
+                  />
+                ))
+              }
             </div>
           </div>
 
-          <Menu 
-          homePage={() => this.homePage()}
-          donatePage={() => this.donatePage()}
-          profilePage={() => this.profilePage()}
+          <Menu
+            homePage={() => this.homePage()}
+            donatePage={() => this.donatePage()}
+            profilePage={() => this.profilePage()}
           />
         </div>
       );
@@ -83,10 +89,10 @@ export default class App extends React.Component {
       return (
         <div className="App">
           <Donate />
-          <Menu 
-          homePage={() => this.homePage()}
-          donatePage={() => this.donatePage()}
-          profilePage={() => this.profilePage()}
+          <Menu
+            homePage={() => this.homePage()}
+            donatePage={() => this.donatePage()}
+            profilePage={() => this.profilePage()}
           />
         </div>
       )
@@ -96,10 +102,10 @@ export default class App extends React.Component {
       return (
         <div className="App">
           <Profile />
-          <Menu 
-          homePage={() => this.homePage()}
-          donatePage={() => this.donatePage()}
-          profilePage={() => this.profilePage()}
+          <Menu
+            homePage={() => this.homePage()}
+            donatePage={() => this.donatePage()}
+            profilePage={() => this.profilePage()}
           />
         </div>
       )

@@ -5,10 +5,6 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import PlaylistAddIcon from '@material-ui/icons/PlaylistAdd';
 
 export default class Menu extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <div className="menu">
