@@ -66,6 +66,13 @@ export async function getIds() {
     return res.map(e => e._id);
 }
 
+//return a single product filtered by id to the frontend
+export async function getElementById(body) {
+    const collection = await getCollection(DB_NAME, "products");
+    const res = await collection.findOne({_id: mongodb.ObjectId(body.id)});
+    return res;
+}
+
 // async function getCollection(dbName, collectionName) {
 //     const aluno = await connect(URI);
 //     const db = aluno.db(dbName);
