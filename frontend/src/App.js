@@ -1,8 +1,12 @@
 import React from 'react';
 import './css/App.css';
+
+import Products from "./Products"
+
 import HomeIcon from '@material-ui/icons/Home';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import PlaylistAddIcon from '@material-ui/icons/PlaylistAdd';
+
 
 export default class App extends React.Component {
   constructor(props) {
@@ -53,6 +57,10 @@ export default class App extends React.Component {
             <span>Profile</span>
           </button>
         </div>
+
+        <Products />
+
+
 
       </div>
     );

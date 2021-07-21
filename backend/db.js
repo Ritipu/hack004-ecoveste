@@ -52,6 +52,13 @@ export async function insertDonors(donors) {
     return res;
 }
 
+//return the products to the frontend
+export async function getProducts() {
+    const collection = await getCollection(DB_NAME, "products");
+    const res = await collection.find().toArray();
+    return res;
+}
+
 // async function getCollection(dbName, collectionName) {
 //     const aluno = await connect(URI);
 //     const db = aluno.db(dbName);
