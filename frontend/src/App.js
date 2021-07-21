@@ -7,6 +7,7 @@ import Donate from './pages/donate'
 import Menu from './components/menu'
 
 
+
 export default class App extends React.Component {
   constructor(props) {
     super(props);
