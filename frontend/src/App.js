@@ -1,5 +1,6 @@
 import React from 'react';
 import './css/App.css';
+import Products from "./Products"
 
 export default class App extends React.Component {
   render() {
@@ -14,6 +15,7 @@ export default class App extends React.Component {
         <div className="menu">
           <p>Menu</p>
         </div>
+        <Products />
       </div>
     );
   }

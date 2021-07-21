@@ -1,6 +1,6 @@
 {
   "itens":  [{
-    "categorie": "t-shirt",
+    "category": "t-shirt",
     "size" : "L",
     "description": "",   
     "image": "/tshirt001.jpeg",
