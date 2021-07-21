@@ -13,17 +13,20 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: [],
+      id: '60f81e54b4a10d10172b7347',
       search: '',
       pageControl: 0,
     }
   }
 
   componentDidMount() {
-    // fetch dos produtos
-    // ids no state
-    // map dos ids do state
-  }
+    fetch('/byid', {
+      method: 'POST',
+      body: JSON.stringify({id: this.state.id}),
+      headers: {
+        "Content-Type": 'application/json'
+      }
+    })
 
   getByCategory() {
     // fetch server POST === enviar search state
@@ -56,6 +59,7 @@ export default class App extends React.Component {
           </div>
 
           <h3 id="subtitle">Anúncios</h3>
+
 
           <div className="ad-body">
             <div className="ad-body-row">
