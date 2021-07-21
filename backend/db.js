@@ -73,6 +73,13 @@ export async function getElementById(id) {
     return res;
 }
 
+//return a group of products by category
+export async function getElementByCategory(category) {
+    const collection = await getCollection(DB_NAME, "products");
+    const res = await collection.find({category: category}).toArray();
+    return res;
+}
+
 // async function getCollection(dbName, collectionName) {
 //     const aluno = await connect(URI);
 //     const db = aluno.db(dbName);

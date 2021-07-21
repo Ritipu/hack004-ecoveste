@@ -2,7 +2,8 @@ import express from 'express';
 import { 
     getProducts,
     getIds,
-    getElementById
+    getElementById,
+    getElementByCategory
  } from './db.js';
 
 //import bcrypt from 'bcrypt';
@@ -35,7 +36,12 @@ server.get("/ids", async (req, res) => {
 server.get("/byid/:id", async (req, res) => {
     const product = await getElementById(req.params.id);
     res.status(200).json({ product })
-}) 
+})
+
+server.get("/bycategory/:category", async (req, res) => {
+    const product = await getElementByCategory(req.params.category);
+    res.status(200).json({ product })
+})
 
 // server.post("/api/auth", async (req, res) => {
 //     const { username, password } = req.body;
