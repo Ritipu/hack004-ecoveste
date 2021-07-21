@@ -14,17 +14,11 @@ export default class Card extends React.Component {
     }
 
     async componentDidMount() {
-       await this.getCardInfo();
+        await this.getCardInfo();
     }
 
     async getCardInfo() {
-        const res = await fetch('/byid', {
-            method: 'POST',
-            body: JSON.stringify({ id: this.state.id }),
-            headers: {
-                "Content-Type": 'application/json'
-            }
-        })
+        const res = await fetch(`/byid/${this.state.id}`)
 
         const json = await res.json()
 
@@ -39,11 +33,13 @@ export default class Card extends React.Component {
     render() {
         return (
             <div className="card">
-                <div className="card-img">
-                    <img src="/assets/logo.png" height="120px" />
+                <div className="card-img-block">
+                    <img src={this.state.image} className="card-img" />
                 </div>
-                <h3>{this.state.title}</h3>
-                <p>{this.state.location}</p>
+                <div className="card-txt-block">
+                    <h3>{this.state.title}</h3>
+                    <p>{this.state.location}</p>    
+                </div>
             </div>
         )
     }

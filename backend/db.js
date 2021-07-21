@@ -67,9 +67,9 @@ export async function getIds() {
 }
 
 //return a single product filtered by id to the frontend
-export async function getElementById(body) {
+export async function getElementById(id) {
     const collection = await getCollection(DB_NAME, "products");
-    const res = await collection.findOne({_id: mongodb.ObjectId(body.id)});
+    const res = await collection.findOne({_id: mongodb.ObjectId(id)});
     return res;
 }
 

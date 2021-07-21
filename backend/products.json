@@ -5,7 +5,7 @@
       "category": "t-shirt",
       "size": "L",
       "description": "",
-      "image": "/led-zep-shirt.jpeg",
+      "image": "/assets/products/led-zep-shirt.jpeg",
       "location": "Tapada das Mercês",
       "donorId": "0001"
     },
@@ -14,7 +14,7 @@
       "category": "shoes",
       "size": "2 months",
       "description": "",
-      "image": "/babyshoes001.jpeg",
+      "image": "/assets/products/babyshoes001.jpeg",
       "location": "Mem Martins",
       "donorId": "0001"
     },
@@ -23,7 +23,7 @@
       "category": "t-shirt",
       "size": "S",
       "description": "",
-      "image": "/tshirt002.jpeg",
+      "image": "/assets/products/tshirt002.jpeg",
       "location": "Colares",
       "donorId": "0001"
     },
@@ -32,7 +32,7 @@
       "category": "pants",
       "size": "44",
       "description": "",
-      "image": "/pants001.jpeg",
+      "image": "/assets/products/pants001.jpeg",
       "location": "Portela de Sintra",
       "donorId": "0001"
     }

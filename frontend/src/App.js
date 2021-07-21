@@ -7,8 +7,6 @@ import Donate from './pages/donate'
 import Profile from './pages/profile'
 import Menu from './components/menu'
 
-
-
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -56,7 +54,7 @@ export default class App extends React.Component {
           </div>
 
           <div className="searchbar">
-            <input type="text" className="searchbar-bar" placeholder="Insere uma peça de roupa" />
+            <input type="text" className="searchbar-bar" placeholder="Insira uma peça de roupa" />
 
             <button className="searchbar-btn"><SearchIcon /></button>
           </div>

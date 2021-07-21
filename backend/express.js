@@ -32,8 +32,8 @@ server.get("/ids", async (req, res) => {
 }) 
 
 //get a single product by its id
-server.post("/byid", async (req, res) => {
-    const product = await getElementById(req.body);
+server.get("/byid/:id", async (req, res) => {
+    const product = await getElementById(req.params.id);
     res.status(200).json({ product })
 }) 
 
