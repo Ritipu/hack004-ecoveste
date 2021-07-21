@@ -12,29 +12,38 @@ export default class Card extends React.Component {
             category: '',
         }
     }
-    
-    componentDidMount() {
-        console.log('ID do Card: ' + this.state.id)
+
+    async componentDidMount() {
+       await this.getCardInfo();
     }
-    
-    // async getCardInfo() {
-    //     await fetch('/byid', {
-    //       method: 'POST',
-    //       body: JSON.stringify({id: this.state.id}), 
-    //       headers: {
-    //         "Content-Type": 'application/json'
-    //       }
-    //     })
-    //   }
+
+    async getCardInfo() {
+        const res = await fetch('/byid', {
+            method: 'POST',
+            body: JSON.stringify({ id: this.state.id }),
+            headers: {
+                "Content-Type": 'application/json'
+            }
+        })
+
+        const json = await res.json()
+
+        this.setState({
+            title: json.product.name,
+            location: json.product.location,
+            image: json.product.image,
+            category: json.product.category
+        })
+    }
 
     render() {
         return (
             <div className="card">
                 <div className="card-img">
-                    <img src="/assets/logo.png" height="120px"/>
+                    <img src="/assets/logo.png" height="120px" />
                 </div>
-                <p>Calças</p>
-                <p>Colares</p>
+                <h3>{this.state.title}</h3>
+                <p>{this.state.location}</p>
             </div>
         )
     }
