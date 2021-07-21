@@ -59,6 +59,13 @@ export async function getProducts() {
     return res;
 }
 
+//return the products ids to the frontend
+export async function getIds() {
+    const collection = await getCollection(DB_NAME, "products");
+    const res = await collection.find().toArray();
+    return res.map(e => e._id);
+}
+
 // async function getCollection(dbName, collectionName) {
 //     const aluno = await connect(URI);
 //     const db = aluno.db(dbName);
