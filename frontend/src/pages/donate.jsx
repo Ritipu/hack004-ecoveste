@@ -48,13 +48,14 @@ export default class Donate extends React.Component {
                         <input type="textarea" name="description" placeholder="Insira o seu nome" required /><br />
                     </label>
                     <label>
-                        Email <br/>
-                        <input type="email" name="email" placeholder="Insira o email a ser apresentado" /><br />
-                    </label>
-                    <label>
                         Contacto telefónico* <br/>
                         <input type="tel" name="telephone" placeholder="Insira o contacto telefónico a ser apresentado" required /><br />
                     </label>
+                    <label>
+                        Email <br/>
+                        <input type="email" name="email" placeholder="Insira o email a ser apresentado" /><br />
+                    </label>
+                    
                     </p>
                     <input type="submit" value="Publicar Anúncio"></input>
                 </form>
