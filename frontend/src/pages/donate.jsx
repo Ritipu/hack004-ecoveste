@@ -13,18 +13,19 @@ export default class Donate extends React.Component {
                     <label>
                         Categoria*
                         <select name="category">
-                            <option value="t-shirt">T-shirt</option>
                             <option value="calças">Calças</option>
-                            <option value="sapatos">Sapatos</option>
                             <option value="casacos">Casacos</option>
+                            <option value="t-shirt">T-shirt</option>
+                            <option value="pijamas">Pijamas</option>
+                            <option value="saias">Saias</option>
+                            <option value="sapatos">Sapatos</option>
+                            <option value="vestidos">Vestidos</option>
                         </select>
-                        
                     </label> <br/>
                     <label>
                         Descrição* <br/>
                         <input type="textarea" name="description" placeholder="Escreva uma pequena descrição para que os outros utilizadores saibam mais sobre o seu produto." required /><br />
                     </label>
-
                     <p>
                         <h3>Contacto</h3>
                     <label>
@@ -48,14 +49,13 @@ export default class Donate extends React.Component {
                         <input type="textarea" name="description" placeholder="Insira o seu nome" required /><br />
                     </label>
                     <label>
-                        Contacto telefónico* <br/>
+                        Telefone* <br/>
                         <input type="tel" name="telephone" placeholder="Insira o contacto telefónico a ser apresentado" required /><br />
                     </label>
                     <label>
                         Email <br/>
                         <input type="email" name="email" placeholder="Insira o email a ser apresentado" /><br />
                     </label>
-                    
                     </p>
                     <input type="submit" value="Publicar Anúncio"></input>
                 </form>

@@ -1,7 +1,7 @@
 {
   "itens": [
     {
-      "name": "Led Zeppelin t-shirt",
+      "name": "T-shirt Led Zeppelin",
       "category": "t-shirt",
       "size": "L",
       "description": "",
@@ -10,16 +10,16 @@
       "donorId": "0001"
     },
     {
-      "name": "Pink baby shoes",
-      "category": "shoes",
-      "size": "2 months",
+      "name": "Sapatos de bebé rosa",
+      "category": "sapatos",
+      "size": "2 meses",
       "description": "",
       "image": "/babyshoes001.jpeg",
       "location": "Mem Martins",
       "donorId": "0001"
     },
     {
-      "name": "Mickey Mouse t-shirt",
+      "name": "T-shirt Mickey Mouse",
       "category": "t-shirt",
       "size": "S",
       "description": "",
@@ -28,13 +28,68 @@
       "donorId": "0001"
     },
     {
-      "name": "Jeans pants",
-      "category": "pants",
+      "name": "Jeans",
+      "category": "calças",
       "size": "44",
       "description": "",
       "image": "/pants001.jpeg",
       "location": "Portela de Sintra",
       "donorId": "0001"
+    },
+    {
+      "name": "Calças de criança",
+      "category": "calças",
+      "size": "3 anos",
+      "description": "",
+      "image": "/pants002.jpeg",
+      "location": "Queluz e Belas",
+      "donorId": "0001"
+    },
+    {
+      "name": "Casaco de criança",
+      "category": "casacos",
+      "size": "S",
+      "description": "",
+      "image": "/jacket002.jpeg",
+      "location": "Portela de Sintra",
+      "donorId": "0001"
+    },
+    {
+      "name": "Casaco de ganga",
+      "category": "casacos",
+      "size": "M",
+      "description": "",
+      "image": "/jacket001.jpeg",
+      "location": "Sintra",
+      "donorId": "0001"
+    },
+    {
+      "name": "Pijama",
+      "category": "pijamas",
+      "size": "XS",
+      "description": "",
+      "image": "/pyjama001.jpeg",
+      "location": "Massamá e Monte Abraão",
+      "donorId": "0001"
+    },
+    {
+      "name": "Vestido azul",
+      "category": "vestidos",
+      "size": "M",
+      "description": "",
+      "image": "/dress001.jpeg",
+      "location": "Colares",
+      "donorId": "0001"
+    },
+    {
+      "name": "Saia às bolinhas",
+      "category": "saias",
+      "size": "36",
+      "description": "",
+      "image": "/skirt001.jpeg",
+      "location": "Casal de Cambra",
+      "donorId": "0001"
     }
   ]
+  
 }
