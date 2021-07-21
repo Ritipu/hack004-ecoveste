@@ -1,9 +1,11 @@
 {
   "itens":  [{
+    "name": "Led Zeppelin t-shirt",
     "category": "t-shirt",
     "size" : "L",
     "description": "",   
     "image": "/tshirt001.jpeg",
+    "location": "Tapada das Mercês",
     "donorId": "0001"
     }  
 ]}
