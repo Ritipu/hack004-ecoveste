@@ -1,0 +1,9 @@
+{
+  "itens":  [{
+    "categorie": "t-shirt",
+    "size" : "L",
+    "description": "",   
+    "image": "/tshirt001.jpeg",
+    "donorId": "0001"
+    }  
+]}
