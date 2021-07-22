@@ -56,8 +56,22 @@ export default class Donate extends React.Component {
 
 	submitForm(form) {
 		form.preventDefault()
-		
-		console.log(this.state.locationSelected)
+
+		fetch("/addproduct", { 
+			method: "POST", 
+			body: JSON.stringify({
+				name: this.state.title,
+				category: this.state.categorySelected,
+				size: this.state.size,
+				description: this.state.description,
+				image: this.state.image,
+				location: this.state.locationSelected,
+				donorId: this.state.id
+			}), 
+			headers: {
+				"Content-Type": "application/json"
+			}
+		})
 
 		this.props.homePage()
 	}

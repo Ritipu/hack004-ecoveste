@@ -29,18 +29,18 @@ export default class Profile extends React.Component {
 		console.log('Phone Number: ' + this.state.phoneNum)
 
 		fetch("/adddonor", {
-	        method: "POST",
-	        body: {
-                donorId: "0003",
-                name: this.state.name,
-                email: this.state.email,
-                tel: this.state.phoneNum,
-                avatar: ""
-            },
-	        headers: {
-	            "Content-Type": "application/json"
-	        }
-	    })
+			method: "POST",
+			body: JSON.stringify({
+				donorId: "0003",
+				name: this.state.name,
+				email: this.state.email,
+				tel: this.state.phoneNum,
+				avatar: ""
+			}),
+			headers: {
+				"Content-Type": "application/json"
+			}
+		})
 
 		this.setState({ isOpen: false });
 	}
@@ -70,12 +70,8 @@ export default class Profile extends React.Component {
 				<img className="logo" src="/assets/logo.png" alt="logo"></img>
 
 				<form className="form">
-					<label>
-						<input className="login-data" type="email" name="email" placeholder="Insira o seu email" required />
-					</label>
-					<label>
-						<input className="login-data" type="password" name="password" placeholder="Insira a sua password" required />
-					</label>
+					<input className="login-data" type="email" name="email" placeholder="Insira o seu email" required />
+					<input className="login-data" type="password" name="password" placeholder="Insira a sua password" required />
 					<button className="submit" type="submit">Submeter</button>
 				</form>
 
@@ -86,46 +82,38 @@ export default class Profile extends React.Component {
 						<>
 							<div className="popup-content">
 								<form onSubmit={this.onSubmit}>
-									<label>
-										<input
-											className="boxes"
-											type="text"
-											name="username"
-											placeholder="Insira o seu nome"
-											value={this.state.name}
-											onChange={this.handleName}
-										/><br />
-									</label>
-									<label>
-										<input
-											className="boxes"
-											type="text"
-											name="telefone"
-											placeholder="Insira o seu número de telefone"
-											value={this.state.phoneNum}
-											onChange={this.handlePhone}
-										/><br />
-									</label>
-									<label>
-										<input
-											className="boxes"
-											type="email"
-											name="email"
-											placeholder="Insira o seu email"
-											value={this.state.email}
-											onChange={this.handleEmail}
-										/><br />
-									</label>
-									<label>
-										<input
-											className="boxes"
-											type="password"
-											name="password"
-											placeholder="Insira a sua password"
-											value={this.state.pw}
-											onChange={this.handlePassword}
-										/><br />
-									</label>
+									<input
+										className="boxes"
+										type="text"
+										name="username"
+										placeholder="Insira o seu nome"
+										value={this.state.name}
+										onChange={this.handleName}
+									/><br />
+									<input
+										className="boxes"
+										type="text"
+										name="telefone"
+										placeholder="Insira o seu número de telefone"
+										value={this.state.phoneNum}
+										onChange={this.handlePhone}
+									/><br />
+									<input
+										className="boxes"
+										type="email"
+										name="email"
+										placeholder="Insira o seu email"
+										value={this.state.email}
+										onChange={this.handleEmail}
+									/><br />
+									<input
+										className="boxes"
+										type="password"
+										name="password"
+										placeholder="Insira a sua password"
+										value={this.state.pw}
+										onChange={this.handlePassword}
+									/><br />
 									<button className="submitpop" type="submit">Submeter</button>
 								</form>
 							</div>
