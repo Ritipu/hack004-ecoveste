@@ -1,0 +1,59 @@
+
+body{
+    font-size: 15px;
+    text-align: center;
+ 
+}
+
+.donateForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+
+}
+/* 
+fieldset{
+    border: 1px solid #000;
+    width: 80%;
+
+} */
+
+.product-data{
+    width: 250px;
+    height: 30px;
+    font-size: 15px;
+    border: 1px solid #363537;
+    border-radius: 7px;
+    text-indent: 1rem;
+}
+
+
+textarea {
+    width: 250px;
+    height: 100px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    align-items: center;
+    resize: none;
+  } 
+
+.donateForm button{
+  border: 0;
+  background: #82ad29;
+  color: #fff;
+  border-radius: 7px;
+  width: 10rem;
+  height: 40px;
+  font-size: 15px;
+ 
+  }
+
+
+  .donateForm button:hover{
+    background: #f3a712;
+  }
