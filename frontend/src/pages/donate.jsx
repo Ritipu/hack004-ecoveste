@@ -5,7 +5,7 @@ export default class Donate extends React.Component {
     render() {
         return (
             <>
-              
+            <div className="body">
                 <form className="donateForm">
                  
                     <legend>Criar novo anúncio</legend>
@@ -53,6 +53,7 @@ export default class Donate extends React.Component {
                     <button type="submit">Publicar Anúncio</button>
                
                 </form>
+            </div>
             </>
         )
     }
