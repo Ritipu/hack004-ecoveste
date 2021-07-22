@@ -21,10 +21,13 @@ body {
 }
 
 .registar {
-    align-items: center;
-    width: 250px;
-    font-size: 20px;
-    color: blue;
+    background-color: #363537;
+    height: 40px;
+    border-radius: 7px;
+    width: 180px;
+    font-size: 18px;
+    color: #fff;
+    margin-top: 1rem;
 }
 
 input {
@@ -48,15 +51,18 @@ input {
 }
 
 .submit {
-    background-color: white;
+    background-color: #82ad29;
     height: 40px;
     border-radius: 7px;
     width: 180px;
     font-size: 18px;
+    color: #fff;
+    margin-top: 0.5rem;
 }
 
 form .submitpop{
-    background-color: rgb(238, 238, 238);
+    background-color: #82ad29;
+    color: #fff;
     height: 40px;
     border-radius: 7px;
     width: 180px;

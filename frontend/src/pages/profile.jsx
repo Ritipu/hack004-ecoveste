@@ -74,7 +74,7 @@ export default class Profile extends React.Component {
 					<input className="login-data" type="password" name="password" placeholder="Insira a sua password" required />
 					<button className="submit" type="submit">Submeter</button>
 				</form>
-
+				
 				<button onClick={() => this.togglePopup()} className="registar">Registe-se aqui</button>
 
 				{this.state.isOpen && <Popup
@@ -89,7 +89,7 @@ export default class Profile extends React.Component {
 										placeholder="Insira o seu nome"
 										value={this.state.name}
 										onChange={this.handleName}
-									/><br />
+									/>
 									<input
 										className="boxes"
 										type="text"
@@ -97,7 +97,7 @@ export default class Profile extends React.Component {
 										placeholder="Insira o seu número de telefone"
 										value={this.state.phoneNum}
 										onChange={this.handlePhone}
-									/><br />
+									/>
 									<input
 										className="boxes"
 										type="email"
@@ -105,7 +105,7 @@ export default class Profile extends React.Component {
 										placeholder="Insira o seu email"
 										value={this.state.email}
 										onChange={this.handleEmail}
-									/><br />
+									/>
 									<input
 										className="boxes"
 										type="password"
@@ -113,7 +113,7 @@ export default class Profile extends React.Component {
 										placeholder="Insira a sua password"
 										value={this.state.pw}
 										onChange={this.handlePassword}
-									/><br />
+									/>
 									<button className="submitpop" type="submit">Submeter</button>
 								</form>
 							</div>
