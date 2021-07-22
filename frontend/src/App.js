@@ -7,6 +7,7 @@ import Donate from './pages/donate'
 import Profile from './pages/profile'
 import Menu from './components/menu'
 import Search from './pages/search'
+import Popup from './components/popup'
 
 export default class App extends React.Component {
   constructor(props) {
@@ -15,6 +16,15 @@ export default class App extends React.Component {
       productID: [],
       search: '',
       pageControl: 0,
+      isOpen: false,
+      currentId: "",
+      currentTitle: "",
+      currentImage: "",
+      currentLocation: "",
+      currentDescription: "",
+      currentDonorName: "",
+      currentDonorEmail: "",
+      currentDonorPhone: "",
     }
 
     this.formChange = this.formChange.bind(this)
@@ -48,7 +58,7 @@ export default class App extends React.Component {
     this.setState({ pageControl: 2 })
   }
 
-  handleSubmit(){
+  handleSubmit() {
     this.setState({ pageControl: 3 })
   }
 
@@ -57,21 +67,87 @@ export default class App extends React.Component {
     // teste github
   }
 
+  togglePopup() {
+    this.setState((state) => (
+      { isOpen: !(state.isOpen) }
+    ))
+  }
+
+  setCurrentTitle(title) {
+    this.setState({
+      currentTitle: title
+    })
+  }
+
+  setCurrentImage(image) {
+    this.setState({
+      currentImage: image
+    })
+  }
+
+  setCurrentLocation(location) {
+    this.setState({
+      currentLocation: location
+    })
+  }
+
+  setCurrentDescription(description) {
+    this.setState({
+      currentDescription: description
+    })
+  }
+
+  setCurrentDonorName(name) {
+    this.setState({
+      currentDonorName: name
+    })
+  }
+
+  setCurrentDonorEmail(email) {
+    this.setState({
+      currentDonorEmail: email
+    })
+  }
+
+  setCurrentDonorPhone(phone) {
+    this.setState({
+      currentDonorPhone: phone
+    })
+  }
+
   render() {
     if (this.state.pageControl === 0) {
       return (
         <div className="App">
 
           <div className="header">
-            <img src="/assets/logo.png" className="logo" alt="header-logo"/>
+            <img src="/assets/logo.png" className="logo" alt="header-logo" />
           </div>
 
           <div className="searchbar">
             <input type="text" className="searchbar-bar" placeholder="Insira uma peça de roupa" value={this.state.search} onChange={this.formChange} />
-            <button onClick={this.handleSubmit} className="searchbar-btn" ><SearchIcon/></button>
+            <button onClick={this.handleSubmit} className="searchbar-btn" ><SearchIcon /></button>
           </div>
 
           <h3 id="subtitle">Anúncios</h3>
+
+          {this.state.isOpen && <Popup
+            content={<>
+              <div className="popup-content">
+                <img src={this.state.currentImage}/>
+                <p>{this.state.currentTitle}</p>
+                <p>{this.state.currentDescription}</p>
+                <p>{this.state.currentLocation}</p>
+                
+                <p>Contactos:<br/>
+                Doador: {this.state.currentDonorName}<br/>
+                E-mail: {this.state.currentDonorEmail}<br/>
+                Telefone: {this.state.currentDonorPhone}</p>
+                
+              </div>
+            </>}
+            handleClose={() => this.togglePopup()}
+          />}
 
 
           <div className="ad-body">
@@ -80,6 +156,14 @@ export default class App extends React.Component {
                 this.state.productID.map(e => (
                   <Card key={e}
                     id={e}
+                    toggle={() => this.togglePopup()}
+                    currenttitle={(title) => this.setCurrentTitle(title)}
+                    currentimage={(image) => this.setCurrentImage(image)}
+                    currentlocation={(location) => this.setCurrentLocation(location)}
+                    currentdescription={(description) => this.setCurrentDescription(description)}
+                    currentdonorname={(name) => this.setCurrentDonorName(name)}
+                    currentdonoremail={(email) => this.setCurrentDonorEmail(email)}
+                    currentdonorphone={(phone) => this.setCurrentDonorPhone(phone)}
                   />
                 ))
               }

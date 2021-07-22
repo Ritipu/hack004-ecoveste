@@ -80,6 +80,13 @@ export async function getElementByCategory(category) {
     return res;
 }
 
+//return a single donor by its id
+export async function getDonorById(id) {
+    const collection = await getCollection(DB_NAME, "donors");
+    const res = await collection.findOne({donorId: id});
+    return res;
+}
+
 // async function getCollection(dbName, collectionName) {
 //     const aluno = await connect(URI);
 //     const db = aluno.db(dbName);
