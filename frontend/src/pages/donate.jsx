@@ -5,16 +5,16 @@ export default class Donate extends React.Component {
     render() {
         return (
             <>
-                <h2>Criar novo anúncio</h2>
+              
                 <form className="donateForm">
+                 
+                    <legend>Criar novo anúncio</legend>
                     IMAGEM <br/>
-                    <label>
-                        Título do anúncio* <br/>
-                        <input type="text" name="title" placeholder="p.ex. calças de ganga" required /><br />
-                    </label>
-                    <label>
-                        Categoria* <br/>
-                        <select name="category" required>
+                    <label>Título do anúncio*</label><br/>
+                        <input className="product-data" type="text" name="title" placeholder="p.ex. calças de ganga" required /><br />
+                    <label>Categoria*</label><br/>
+                        <select className="product-data" name="category" required >
+                            <option value="blank"></option>
                             <option value="calças">Calças</option>
                             <option value="casacos">Casacos</option>
                             <option value="t-shirt">T-shirt</option>
@@ -23,16 +23,13 @@ export default class Donate extends React.Component {
                             <option value="sapatos">Sapatos</option>
                             <option value="vestidos">Vestidos</option>
                         </select>
-                    </label> <br/>
-                    <label>
-                        Descrição* <br/>
+                    <br/>
+                    <label>Descrição*</label><br/>
                         <textarea name="description" placeholder="Escreva uma pequena descrição para que os outros utilizadores saibam mais sobre o seu produto." required /><br />
-                    </label>
-                    
-                        <h3>Contacto</h3>
-                    <label>
-                        Localização* <br/>
-                        <select name="location" required>
+                    <h4>Contacto</h4>
+                    <label>Localização*</label><br/>
+                        <select className="product-data" name="location" required>
+                            <option value="blank"></option>
                             <option value="Agualva_Mira_Sintra">Agualva e Mira Sintra</option>
                             <option value="Algueirao_Mem_Martins">Algueirão-Mem Martins</option>
                             <option value="Almargem_Bispo_Pero_Pinheiro_Montelavar"> Almargem do Bispo, Pêro Pinheiro e Montelavar</option>
@@ -45,21 +42,16 @@ export default class Donate extends React.Component {
                             <option value="Sao_Joao_Lampas_Terrugem">São João das Lampas e Terrugem</option>
                             <option value="Sintra">Sintra</option>
                         </select>
-                    </label><br/>
-                    <label>
-                        Nome* <br/>
-                        <input type="textarea" name="description" placeholder="Insira o seu nome" required /><br />
-                    </label>
-                    <label>
-                        Telefone* <br/>
-                        <input type="tel" name="telephone" placeholder="Insira o contacto telefónico a ser apresentado" required /><br />
-                    </label>
-                    <label>
-                        Email <br/>
-                        <input type="email" name="email" placeholder="Insira o email a ser apresentado" /><br />
-                    </label>
-                    <input type="submit" value="Publicar Anúncio"></input>
-                
+                    <br/>
+                    <label>Nome*</label><br/> 
+                        <input className="product-data" type="textarea" name="description" placeholder="Insira o seu nome" required /><br />
+                    <label>Telefone*</label> <br/>
+                        <input className="product-data" type="tel" name="telephone" placeholder="Insira o contacto telefónico" required /><br />
+                    <label>Email</label><br/>
+                        <input className="product-data" type="email" name="email" placeholder="Insira o email a ser apresentado" /><br />
+                   
+                    <button type="submit">Publicar Anúncio</button>
+               
                 </form>
             </>
         )
