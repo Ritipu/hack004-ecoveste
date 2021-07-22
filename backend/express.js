@@ -2,7 +2,9 @@ import express from 'express';
 import { 
     getProducts,
     getIds,
-    getElementById
+    getElementById,
+    getElementByCategory,
+    getDonorById
  } from './db.js';
 
 //import bcrypt from 'bcrypt';
@@ -32,10 +34,20 @@ server.get("/ids", async (req, res) => {
 }) 
 
 //get a single product by its id
-server.post("/byid", async (req, res) => {
-    const product = await getElementById(req.body);
+server.get("/byid/:id", async (req, res) => {
+    const product = await getElementById(req.params.id);
     res.status(200).json({ product })
-}) 
+})
+
+server.get("/bycategory/:category", async (req, res) => {
+    const product = await getElementByCategory(req.params.category);
+    res.status(200).json({ product })
+})
+
+server.get("/bydonorid/:id", async (req, res) => {
+    const donor = await getDonorById(req.params.id);
+    res.status(200).json({ donor })
+})
 
 // server.post("/api/auth", async (req, res) => {
 //     const { username, password } = req.body;

@@ -1,0 +1,14 @@
+.search-main {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin-bottom: 8vh;
+    background-color: rgb(238, 238, 238);
+}
+
+.results {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
