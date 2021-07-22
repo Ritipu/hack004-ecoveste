@@ -182,7 +182,7 @@ export default class App extends React.Component {
     if (this.state.pageControl === 1) {
       return (
         <div>
-          <Donate />
+          <Donate homePage={() => this.homePage()}/>
           <Menu
             homePage={() => this.homePage()}
             donatePage={() => this.donatePage()}

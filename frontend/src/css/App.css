@@ -39,6 +39,9 @@
 }
 
 .searchbar-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 0;
   background: #82ad29;
   color: #fff;
@@ -46,6 +49,7 @@
   width: 3.2rem;
   height: 40px;
   margin-left: -1rem;
+  margin-bottom: 15px;
 }
 
 .searchbar-btn:active {
@@ -69,6 +73,8 @@
 
 #subtitle {
   text-indent: 1rem;
+  display: flex;
+  align-items: flex-start;
 }
 
 .popup-content {

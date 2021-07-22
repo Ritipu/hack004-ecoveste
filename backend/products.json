@@ -1,8 +1,8 @@
 {
   "itens": [
     {
-      "name": "T-shirt Led Zeppelin",
-      "category": "t-shirt",
+      "name": "T-Shirt Led Zeppelin",
+      "category": "T-Shirt",
       "size": "L",
       "description": "Camisola semi-nova dos Led Zeppelin, usada poucas vezes e em excelente estado",
       "image": "/assets/products/led-zep-shirt.jpg",
@@ -11,7 +11,7 @@
     },
     {
       "name": "Sapatos de bebé rosa",
-      "category": "sapatos",
+      "category": "Sapatos",
       "size": "2 meses",
       "description": "",
       "image": "/assets/products/babyshoes001.jpg",
@@ -19,8 +19,8 @@
       "donorId": "0001"
     },
     {
-      "name": "T-shirt Mickey Mouse",
-      "category": "t-shirt",
+      "name": "T-Shirt Mickey Mouse",
+      "category": "T-Shirt",
       "size": "S",
       "description": "",
       "image": "/assets/products/tshirt002.jpg",
@@ -29,7 +29,7 @@
     },
     {
       "name": "Jeans",
-      "category": "calças",
+      "category": "Calças",
       "size": "44",
       "description": "",
       "image": "/assets/products/pants001.jpg",
@@ -38,55 +38,55 @@
     },
     {
       "name": "Calças de criança",
-      "category": "calças",
+      "category": "Calças",
       "size": "3 anos",
       "description": "",
-      "image": "/pants002.jpeg",
+      "image": "/assets/products/pants002.jpeg",
       "location": "Queluz e Belas",
       "donorId": "0001"
     },
     {
       "name": "Casaco de criança",
-      "category": "casacos",
+      "category": "Casacos",
       "size": "S",
       "description": "",
-      "image": "/jacket002.jpeg",
+      "image": "/assets/products/jacket002.jpeg",
       "location": "Portela de Sintra",
       "donorId": "0001"
     },
     {
       "name": "Casaco de ganga",
-      "category": "casacos",
+      "category": "Casacos",
       "size": "M",
       "description": "",
-      "image": "/jacket001.jpeg",
+      "image": "/assets/products/jacket001.jpeg",
       "location": "Sintra",
       "donorId": "0001"
     },
     {
       "name": "Pijama",
-      "category": "pijamas",
+      "category": "Pijamas",
       "size": "XS",
       "description": "",
-      "image": "/pyjama001.jpeg",
+      "image": "/assets/products/pyjama001.jpeg",
       "location": "Massamá e Monte Abraão",
       "donorId": "0001"
     },
     {
       "name": "Vestido azul",
-      "category": "vestidos",
+      "category": "Vestidos",
       "size": "M",
       "description": "",
-      "image": "/dress001.jpeg",
+      "image": "/assets/products/dress001.jpeg",
       "location": "Colares",
       "donorId": "0001"
     },
     {
       "name": "Saia às bolinhas",
-      "category": "saias",
+      "category": "Saias",
       "size": "36",
       "description": "",
-      "image": "/skirt001.jpeg",
+      "image": "/assets/products/skirt001.jpeg",
       "location": "Casal de Cambra",
       "donorId": "0001"
     }
