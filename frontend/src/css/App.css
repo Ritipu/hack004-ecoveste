@@ -70,3 +70,13 @@
 #subtitle {
   text-indent: 1rem;
 }
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup-content img {
+  height: 200px
+}

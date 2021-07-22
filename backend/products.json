@@ -5,7 +5,7 @@
       "category": "t-shirt",
       "size": "L",
       "description": "Camisola semi-nova dos Led Zeppelin, usada poucas vezes e em excelente estado",
-      "image": "/assets/products/led-zep-shirt.jpeg",
+      "image": "/assets/products/led-zep-shirt.jpg",
       "location": "Tapada das Mercês",
       "donorId": "0001"
     },
@@ -14,7 +14,7 @@
       "category": "sapatos",
       "size": "2 meses",
       "description": "",
-      "image": "/assets/products/babyshoes001.jpeg",
+      "image": "/assets/products/babyshoes001.jpg",
       "location": "Mem Martins",
       "donorId": "0001"
     },
@@ -23,7 +23,7 @@
       "category": "t-shirt",
       "size": "S",
       "description": "",
-      "image": "/assets/products/tshirt002.jpeg",
+      "image": "/assets/products/tshirt002.jpg",
       "location": "Colares",
       "donorId": "0001"
     },
@@ -32,7 +32,7 @@
       "category": "calças",
       "size": "44",
       "description": "",
-      "image": "/assets/products/pants001.jpeg",
+      "image": "/assets/products/pants001.jpg",
       "location": "Portela de Sintra",
       "donorId": "0001"
     },
