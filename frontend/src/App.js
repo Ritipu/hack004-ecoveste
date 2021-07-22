@@ -20,7 +20,11 @@ export default class App extends React.Component {
       currentId: "",
       currentTitle: "",
       currentImage: "",
-      currentLocation: ""
+      currentLocation: "",
+      currentDescription: "",
+      currentDonorName: "",
+      currentDonorEmail: "",
+      currentDonorPhone: "",
     }
 
     this.formChange = this.formChange.bind(this)
@@ -87,6 +91,30 @@ export default class App extends React.Component {
     })
   }
 
+  setCurrentDescription(description) {
+    this.setState({
+      currentDescription: description
+    })
+  }
+
+  setCurrentDonorName(name) {
+    this.setState({
+      currentDonorName: name
+    })
+  }
+
+  setCurrentDonorEmail(email) {
+    this.setState({
+      currentDonorEmail: email
+    })
+  }
+
+  setCurrentDonorPhone(phone) {
+    this.setState({
+      currentDonorPhone: phone
+    })
+  }
+
   render() {
     if (this.state.pageControl === 0) {
       return (
@@ -108,7 +136,14 @@ export default class App extends React.Component {
               <div className="popup-content">
                 <img src={this.state.currentImage}/>
                 <p>{this.state.currentTitle}</p>
+                <p>{this.state.currentDescription}</p>
                 <p>{this.state.currentLocation}</p>
+                
+                <p>Contactos:<br/>
+                Doador: {this.state.currentDonorName}<br/>
+                E-mail: {this.state.currentDonorEmail}<br/>
+                Telefone: {this.state.currentDonorPhone}</p>
+                
               </div>
             </>}
             handleClose={() => this.togglePopup()}
@@ -125,6 +160,10 @@ export default class App extends React.Component {
                     currenttitle={(title) => this.setCurrentTitle(title)}
                     currentimage={(image) => this.setCurrentImage(image)}
                     currentlocation={(location) => this.setCurrentLocation(location)}
+                    currentdescription={(description) => this.setCurrentDescription(description)}
+                    currentdonorname={(name) => this.setCurrentDonorName(name)}
+                    currentdonoremail={(email) => this.setCurrentDonorEmail(email)}
+                    currentdonorphone={(phone) => this.setCurrentDonorPhone(phone)}
                   />
                 ))
               }

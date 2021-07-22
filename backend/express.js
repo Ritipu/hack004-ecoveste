@@ -3,7 +3,8 @@ import {
     getProducts,
     getIds,
     getElementById,
-    getElementByCategory
+    getElementByCategory,
+    getDonorById
  } from './db.js';
 
 //import bcrypt from 'bcrypt';
@@ -41,6 +42,11 @@ server.get("/byid/:id", async (req, res) => {
 server.get("/bycategory/:category", async (req, res) => {
     const product = await getElementByCategory(req.params.category);
     res.status(200).json({ product })
+})
+
+server.get("/bydonorid/:id", async (req, res) => {
+    const donor = await getDonorById(req.params.id);
+    res.status(200).json({ donor })
 })
 
 // server.post("/api/auth", async (req, res) => {

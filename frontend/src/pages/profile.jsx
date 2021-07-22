@@ -40,12 +40,12 @@ export default class Profile extends React.Component {
                 <img className="logo" src="/assets/logo.png"></img>
                 <form className="form">
                     <label>
-                        <input type="email" name="email" placeholder="Insira o seu email" />
+                        <input className="login-data" type="email" name="email" placeholder="Insira o seu email" required/>
                     </label>
                     <label>
-                        <input type="password" name="password" placeholder="Insira a sua password" />
+                        <input className="login-data" type="password" name="password" placeholder="Insira a sua password" required/>
                     </label>
-                    <input type="submit" value="Submeter"></input>
+                    <button className="submit" type="submit">Submeter</button>
                 </form>
                 <button onClick={() => this.togglePopup()} className="registar">Registe-se aqui</button>
 
@@ -55,19 +55,19 @@ export default class Profile extends React.Component {
                             <form onSubmit={() => this.handleSubmit()}>
 
                                 <label>
-                                    <input type="text" name="username" placeholder="Insira o seu nome"  /><br />
+                                    <input className="boxes" type="text" name="username" placeholder="Insira o seu nome" /><br />
                                 </label>
                                 <label>
-                                    <input type="number" name="telefone" placeholder="Insira o seu número de telefone"  /><br />
+                                    <input className="boxes" type="text" name="telefone" placeholder="Insira o seu número de telefone" /><br />
                                 </label>
                                 <label>
-                                    <input type="email" name="email" placeholder="Insira o seu email"  /><br />
+                                    <input className="boxes" type="email" name="email" placeholder="Insira o seu email"  /><br/>
                                 </label>
                                 <label>
-                                    <input type="password" name="password" placeholder="Insira a sua password"  /><br />
+                                    <input className="boxes" type="password" name="password" placeholder="Insira a sua password"  /><br />
                                 </label>
 
-                                <input type="submit" value="Registar" />
+                                <button className="submitpop" type="submit">Submeter</button>
                             </form>
                         </div>
                     </>}

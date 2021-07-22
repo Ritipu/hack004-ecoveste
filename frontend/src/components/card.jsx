@@ -11,12 +11,18 @@ export default class Card extends React.Component {
             location: '',
             image: '',
             category: '',
+            description: "",
+            donorId: "",
+            donorName: "",
+            donorEmail: "",
+            donorPhone: ""
 
         }
     }
 
     async componentDidMount() {
         await this.getCardInfo();
+        await this.getDonorInfo();
     }
 
     async getCardInfo() {
@@ -28,8 +34,23 @@ export default class Card extends React.Component {
             title: json.product.name,
             location: json.product.location,
             image: json.product.image,
-            category: json.product.category
+            category: json.product.category,
+            description: json.product.description,
+            donorId: json.product.donorId
         })
+    }
+
+    async getDonorInfo() {
+        const res = await fetch(`/bydonorid/${this.state.donorId}`)
+
+        const json = await res.json()
+        
+        this.setState({
+            donorName: json.donor.name,
+            donorEmail: json.donor.email,
+            donorPhone: json.donor.tel,
+        })
+
     }
 
     render() {
@@ -39,6 +60,10 @@ export default class Card extends React.Component {
                 this.props.currenttitle(this.state.title);
                 this.props.currentimage(this.state.image);
                 this.props.currentlocation(this.state.location);
+                this.props.currentdescription(this.state.description);
+                this.props.currentdonorname(this.state.donorName);
+                this.props.currentdonoremail(this.state.donorEmail);
+                this.props.currentdonorphone(this.state.donorPhone);
                 }}>
                 <div className="card">
                     <div className="card-img-block">

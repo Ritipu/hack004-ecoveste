@@ -2,7 +2,7 @@
     "donors":  [{
       "donorId": "0001",
       "name": "Joaquim Calducho",
-      "e-mail" : "jcalducho@ecovest.com",
+      "email" : "jcalducho@ecovest.com",
       "tel": "932687634",  
       "avatar": "/assets/avatars/jcalducho.jpeg"
       }  

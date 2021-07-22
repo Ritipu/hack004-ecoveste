@@ -1,7 +1,16 @@
-.body {
+body {
     text-align: center;
-   
+    background-color: rgb(238, 238, 238);
 }
+
+.Profile {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin-bottom: 8vh;
+    background-color: rgb(238, 238, 238);
+    text-align: center;
+  }
 
 .form{
     display: flex;
@@ -14,7 +23,7 @@
 .registar {
     align-items: center;
     width: 250px;
-    font-size: 25px;
+    font-size: 20px;
     color: blue;
 }
 
@@ -28,9 +37,44 @@ input {
     width: 350px;
     height: 50px;
     font-size: 20px;
-    margin-bottom: 15px
+    margin-bottom: 15px;
+    
+}
+
+.login-data {
+    border-radius: 7px;
+    border: none;
+    text-indent: 1rem;
+    height: 40px;
 }
 
 .logo {
+    margin-top: 60px;
     height: 180px
-  }
+}
+
+.submit {
+    background-color: white;
+    height: 40px;
+    border-radius: 7px;
+    width: 180px;
+    font-size: 18px;
+}
+
+form .submitpop{
+    background-color: rgb(238, 238, 238);
+    height: 40px;
+    border-radius: 7px;
+    width: 180px;
+    font-size: 18px;
+    border: 1px solid lightgray
+}
+
+.boxes {
+    width: 280px;
+    border-radius: 7px;
+    border: 1px solid lightgray;
+    font-size: 17px;
+    text-indent: 1rem;
+    height: 40px;
+}
