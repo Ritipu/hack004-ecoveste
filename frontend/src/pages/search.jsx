@@ -106,7 +106,7 @@ export default class Search extends React.Component {
                 {this.state.isOpen && <Popup
                     content={<>
                         <div className="popup-content">
-                            <img src={this.state.currentImage} />
+                            <img src={this.state.currentImage} alt="popup" />
                             <p>{this.state.currentTitle}</p>
                             <p>{this.state.currentDescription}</p>
                             <p>{this.state.currentLocation}</p>
