@@ -28,13 +28,19 @@ export default class Profile extends React.Component {
 		console.log('Email: ' + this.state.email)
 		console.log('Phone Number: ' + this.state.phoneNum)
 
-		// fetch("/adddonor", {
-	  //       method: "POST",
-	  //       body: {},
-	  //       headers: {
-	  //           "Content-Type": "application/json"
-	  //       }
-	  //   })
+		fetch("/adddonor", {
+	        method: "POST",
+	        body: {
+                donorId: "0003",
+                name: this.state.name,
+                email: this.state.email,
+                tel: this.state.phoneNum,
+                avatar: ""
+            },
+	        headers: {
+	            "Content-Type": "application/json"
+	        }
+	    })
 
 		this.setState({ isOpen: false });
 	}
